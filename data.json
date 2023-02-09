@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "Music Application",
+    "img": "./images/music1.PNG",
+
+    "desc": ["Home page, explore page, artist's page, album's page, playlist's page", "Audio player with song info, controls (play, pause, next, previous, volume, progression of the track), queue (with the current playlist)", "Back-end for register, login, update profile and add to favorites", "When the user is logged in, user can add artists, playlists, albums and songs to favorites."],
+    "tools": [
+      "React",
+      "TypeScript",
+      "Redux Toolkit",
+      "React-router-dom",
+      "Material UI",
+      "Swiper",
+      "Classnames",
+      "Deezer API",
+      "Express JS",
+      "MongoDB",
+      "Mongoose"
+    ],
+    "github": "https://github.com/BiancaGlavan/music-app-react-redux",
+    "live_link": "https://react-music-app-bb.netlify.app/"
+  },
+  {
+    "id": 2,
+    "title": "Blog Application",
+    "img": "./images/blog.PNG",
+    "desc": ["sdasdasd", "asdsads"],
+    "tools": [
+      "React",
+      "TypeScript"
+    ],
+    "github": "https://github.com/BiancaGlavan/blog-app-react",
+    "live_link": "https://github.com/BiancaGlavan/blog-app-react"
+  }
+]
