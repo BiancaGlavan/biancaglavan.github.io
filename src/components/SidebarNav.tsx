@@ -21,7 +21,7 @@ const StyledSidebarNav = styled("div")`
     }
 
     .section {
-      color: ${(props) => props.theme.palette.secondary.main};
+      color: ${(props) => props.theme.palette.text.secondary};
       font-weight: 600;
 
       &:hover {

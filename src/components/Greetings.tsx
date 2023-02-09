@@ -1,17 +1,14 @@
-import { Box, Button, Container, IconButton, Tooltip, Typography } from "@mui/material";
+import { Box, Button, IconButton, Tooltip, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Icon } from "@iconify/react";
-import { useState } from "react";
-import classNames from "classnames";
 import CodewarsIcon from "./CodewarsIcon";
 
 const StyledGreetings = styled("div")`
   background: ${(props) => props.theme.palette.background.default};
-  height: 700px;
-  padding-top: 100px;
+  padding-top: 150px;
   display: flex;
+  padding-bottom: 230px;
 
   .social-links {
     display: flex;
@@ -39,14 +36,16 @@ const StyledGreetings = styled("div")`
 
   .greetings-container {
     margin-left: 200px;
-    margin-right: 20px;
+    margin-right: 200px;
 
     ${(props) => props.theme.breakpoints.down("lg")} {
       margin-left: 100px;
+      margin-right: 100px;
     }
 
     ${(props) => props.theme.breakpoints.down("md")} {
-      margin-left: 80px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
   }
 
@@ -60,12 +59,20 @@ const StyledGreetings = styled("div")`
     font-weight: 600;
     margin-top: 30px;
   }
+
+  .text-details {
+    color: ${(props) => props.theme.palette.text.secondary};
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Greetings = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <StyledGreetings className="Greetings">
-      <Box className="social-links">
+      {!isMobile && <Box className="social-links">
         <Tooltip title="GitHub" placement="right">
           <a href="https://github.com/BiancaGlavan" target="_blank">
             <IconButton className="icon">
@@ -87,13 +94,17 @@ const Greetings = () => {
             </a>
           </Tooltip>
         }
-      </Box>
+      </Box>}
       <Box className="greetings-container">
         <Typography className="text" variant="h3">
           Hi, I'm Bianca.
         </Typography>
         <Typography className="text" variant="h3">
           I build things for the web.
+        </Typography>
+        <Typography className="text-details" variant="body1">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, ex eius, ad non doloremque magnam
+          officiis fugiat deserunt sint nisi animi aperiam sequi quia voluptate asperiores culpa, qui odio nam?
         </Typography>
         <a href="#resume" target="_blank">
           <Button size="large" variant="outlined" className="button-link">

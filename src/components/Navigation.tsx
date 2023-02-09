@@ -19,7 +19,6 @@ const StyledNavigation = styled("div")`
     display: flex;
     align-items: center;
     gap: 5px;
-    
 
     .section-nr {
       color: ${(props) => props.theme.palette.primary.main};
@@ -62,51 +61,46 @@ const Navigation = () => {
       <Container className="navigation-container">
         {isMobile && (
           <IconButton onClick={handleDrawerToggle}>
-            <MenuIcon className="menu-icon"/>
+            <MenuIcon className="menu-icon" />
           </IconButton>
         )}
         {!isMobile && (
           <>
-            <a href="#about">
-              <Box className="menu-link">
-                <Typography variant="subtitle1" className="section-nr">
-                  01.
-                </Typography>
-                <Typography variant="subtitle1" className="section">
-                  About me
-                </Typography>
-              </Box>
-            </a>
-            <a href="#projects">
-              <Box className="menu-link">
-                <Typography variant="subtitle1" className="section-nr">
-                  02.
-                </Typography>
-                <Typography variant="subtitle1" className="section">
-                  Projects
-                </Typography>
-              </Box>
-            </a>
-            <a href="#skills">
-              <Box className="menu-link">
-                <Typography variant="subtitle1" className="section-nr">
-                  03.
-                </Typography>
-                <Typography variant="subtitle1" className="section">
-                  Skills
-                </Typography>
-              </Box>
-            </a>
-            <a href="#about">
-              <Box className="menu-link">
-                <Typography variant="subtitle1" className="section-nr">
-                  04.
-                </Typography>
-                <Typography variant="subtitle1" className="section">
-                  Contact
-                </Typography>
-              </Box>
-            </a>
+            <Box className="menu-link">
+              <Typography variant="subtitle1" className="section-nr">
+                01.
+              </Typography>
+              <Typography variant="subtitle1" className="section">
+                About me
+              </Typography>
+            </Box>
+
+            <Box className="menu-link">
+              <Typography variant="subtitle1" className="section-nr">
+                02.
+              </Typography>
+              <Typography variant="subtitle1" className="section">
+                Projects
+              </Typography>
+            </Box>
+
+            <Box className="menu-link">
+              <Typography variant="subtitle1" className="section-nr">
+                03.
+              </Typography>
+              <Typography variant="subtitle1" className="section">
+                Skills
+              </Typography>
+            </Box>
+
+            <Box className="menu-link">
+              <Typography variant="subtitle1" className="section-nr">
+                04.
+              </Typography>
+              <Typography variant="subtitle1" className="section">
+                Contact
+              </Typography>
+            </Box>
           </>
         )}
         <StyledDrawer
@@ -124,7 +118,7 @@ const Navigation = () => {
         >
           <Box sx={{ display: "flex", justifyContent: "flex-end", padding: "10px" }}>
             <IconButton onClick={handleDrawerToggle}>
-              <CloseIcon className="close-icon"/>
+              <CloseIcon className="close-icon" />
             </IconButton>
           </Box>
           <SidebarNav />

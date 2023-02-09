@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import SectionName from "./SectionName";
 
@@ -8,54 +8,63 @@ const StyledAboutMe = styled("div")`
 
   .aboutme-container {
     margin-left: 200px;
-    margin-right: 20px;
+    margin-right: 200px;
 
     ${(props) => props.theme.breakpoints.down("lg")} {
       margin-left: 100px;
+      margin-right: 100px;
     }
 
     ${(props) => props.theme.breakpoints.down("md")} {
-      margin-left: 80px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
   }
 
   .aboutme-info {
+    margin-top: 40px;
     display: flex;
     gap: 100px;
 
-    ${(props) =>props.theme.breakpoints.down('md')} {
+    ${(props) => props.theme.breakpoints.down("md")} {
       flex-direction: column;
       align-items: center;
+      gap: 50px;
+    }  
+  }
+
+    .img-container {
+      width: 250px;
+      height: 250px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50% 20% / 10% 40%;
+        object-fit: cover;
+      }
     }
 
     .aboutme-text {
       width: 50%;
 
-      ${(props) =>props.theme.breakpoints.down('md')} {
+      ${(props) => props.theme.breakpoints.down("md")} {
         width: 100%;
       }
     }
 
     .text {
-      margin-top: 30px;
+      margin-bottom: 20px;
       color: ${(props) => props.theme.palette.text.secondary};
     }
-
-    img {
-      width: 250px;
-      height: 250px;
-      border-radius: 50% 20% / 10% 40%;
-      object-fit: cover;
-    }
-    
   }
 `;
 
 const AboutMe = () => {
   return (
-    <StyledAboutMe className="AboutMe" id="about">
+    <StyledAboutMe className="AboutMe">
       <Box className="aboutme-container">
-        <SectionName ordering="01." title="About me"/>
+        <SectionName ordering="01." title="About me" />
         <Box className="aboutme-info">
           <Box className="aboutme-text">
             <Typography variant="body1" className="text">
@@ -69,7 +78,11 @@ const AboutMe = () => {
               exercitationem.
             </Typography>
           </Box>
-          <img src="./images/cv-photo.jpg" alt="" />
+       
+          <Box className="img-container">
+            <img src="./images/cv-photo.jpg" alt="" />
+          </Box>
+     
         </Box>
       </Box>
     </StyledAboutMe>
