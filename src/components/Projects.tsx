@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Stack } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import SectionName from "./SectionName";
 import data from "../../data.json";
@@ -49,11 +49,18 @@ const Projects = () => {
           <Grid className="my-projects" container spacing={2}>
             {projects.map((project, idx) => (
               <Grid key={project.id} item xs={12} md={6}>
-                <Project project={project} />
+                <Box justifyContent="center">
+                  <Project project={project} />
+                </Box>
               </Grid>
             ))}
           </Grid>
         )}
+        {/* {projects && (
+          <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: 1, sm: 2, md: 4 }}>
+            {projects.map((project, idx) =>  <Project key={project.id} project={project} />)}
+          </Stack>
+        )} */}
       </Box>
     </StyledProjects>
   );

@@ -15,9 +15,18 @@ const StyledProject = styled("div")`
   gap: 20px;
   max-width: 470px;
   border: 1px solid ${(props) => props.theme.palette.primary.main};
+  margin-bottom: 50px;
+
+  ${(props) => props.theme.breakpoints.down("md")} {
+    max-width: 100%;
+  }
 
   .project-img {
     max-width: 470px;
+
+    ${(props) => props.theme.breakpoints.down("md")} {
+      max-width: 100%;
+    }
 
     img {
       width: 100%;
