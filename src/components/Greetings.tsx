@@ -26,12 +26,6 @@ const StyledGreetings = styled("div")`
         color: ${(props) => props.theme.palette.primary.main};
       }
     }
-
-    .codewars-icon {
-      &.isHovered {
-        color: ${(props) => props.theme.palette.primary.main};
-      }
-    }
   }
 
   .greetings-container {

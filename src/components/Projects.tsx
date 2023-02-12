@@ -56,11 +56,6 @@ const Projects = () => {
             ))}
           </Grid>
         )}
-        {/* {projects && (
-          <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: 1, sm: 2, md: 4 }}>
-            {projects.map((project, idx) =>  <Project key={project.id} project={project} />)}
-          </Stack>
-        )} */}
       </Box>
     </StyledProjects>
   );

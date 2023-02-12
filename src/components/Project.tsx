@@ -83,9 +83,11 @@ const Project = ({ project }: IPropsProject) => {
         <img src={project.img} />
       </Box>
       <Box className="project-info-container">
-        <Typography className="project-title" variant="h6">
-          {project.title}
-        </Typography>
+        <a href={project.live_link} target="_blank">
+          <Typography className="project-title" variant="h6">
+            {project.title}
+          </Typography>
+        </a>
 
         <Box>
           {project.desc.map((description, idx) => (
