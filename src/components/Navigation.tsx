@@ -1,12 +1,30 @@
 import { Box, Container, Drawer, IconButton, styled, Typography, useMediaQuery, useTheme } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SidebarNav from "./SidebarNav";
 import CloseIcon from "@mui/icons-material/Close";
+import { useScrollDirection } from 'react-use-scroll-direction';
+import classNames from "classnames";
 
 const StyledNavigation = styled("div")`
   background: ${(props) => props.theme.palette.background.default};
   padding: 20px;
+  position: sticky;
+  top: 0;
+  height: 68px;
+  transition-property: all; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+
+  &.show {
+    top: 0;
+    opacity: 0.8;
+  }
+  
+  &.hide {
+    top: -68px;
+  }
+
 
   .navigation-container {
     display: flex;
@@ -48,6 +66,8 @@ const StyledDrawer = styled(Drawer)`
 
 const Navigation = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { isScrolling, isScrollingUp, isScrollingDown } = useScrollDirection()
+  const [scrollDirection, setScrollDirection] = useState("up");
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -56,8 +76,17 @@ const Navigation = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  useEffect(() => {
+    if (isScrolling === true && isScrollingDown === true)
+      setScrollDirection("down");
+    else if (isScrolling === true && isScrollingUp === true)
+      setScrollDirection("up");
+  }, [isScrollingUp, isScrollingDown, isScrolling]);
+
+  const className = scrollDirection === "down" ? " hide" : "";
+
   return (
-    <StyledNavigation className="Navigation">
+    <StyledNavigation className={"show" + className}>
       <Container className="navigation-container">
         {isMobile && (
           <IconButton onClick={handleDrawerToggle}>
