@@ -45,13 +45,13 @@ const SidebarNav = () => {
           </Typography>
         </Box>
       </a>
-      <a href="#work">
+      <a href="#projects">
         <Box className="menu-link">
           <Typography variant="subtitle1" className="section-nr">
             02.
           </Typography>
           <Typography variant="subtitle1" className="section">
-            Work
+            Projects
           </Typography>
         </Box>
       </a>
@@ -65,7 +65,7 @@ const SidebarNav = () => {
           </Typography>
         </Box>
       </a>
-      <a href="#about">
+      <a href="#contact">
         <Box className="menu-link">
           <Typography variant="subtitle1" className="section-nr">
             04.

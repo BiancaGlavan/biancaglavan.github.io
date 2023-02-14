@@ -12,6 +12,16 @@ const StyledSingleSkill = styled("div")`
 
   .tool {
     color: ${(props) => props.theme.palette.text.secondary};
+
+    ${(props) => props.theme.breakpoints.down('sm')} {
+      font-size: 16px;
+    }
+  }
+
+  .arrow-icon {
+    ${(props) => props.theme.breakpoints.down('sm')} {
+      display: none;
+    }
   }
 `;
 

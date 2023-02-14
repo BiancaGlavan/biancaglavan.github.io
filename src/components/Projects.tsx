@@ -1,4 +1,4 @@
-import { Box, Grid, Stack } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import SectionName from "./SectionName";
 import data from "../../data.json";
@@ -17,6 +17,10 @@ export interface IProject {
 const StyledProjects = styled("div")`
   background: ${(props) => props.theme.palette.background.default};
   padding-bottom: 150px;
+
+  ${(props) => props.theme.breakpoints.down('sm')} {
+    padding-bottom: 100px;
+  }
 
   .projects-container {
     margin-left: 200px;
@@ -42,7 +46,7 @@ const Projects = () => {
   const projects: IProject[] = data;
 
   return (
-    <StyledProjects className="Projects">
+    <StyledProjects className="Projects" id="projects">
       <Box className="projects-container">
         <SectionName ordering="02." title="My Projects" />
         {projects && (

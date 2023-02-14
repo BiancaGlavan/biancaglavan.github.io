@@ -4,7 +4,11 @@ import SectionName from "./SectionName";
 
 const StyledAboutMe = styled("div")`
   background: ${(props) => props.theme.palette.background.default};
-  padding-bottom: 150px;
+  padding-bottom: 150px; 
+
+  ${(props) => props.theme.breakpoints.down('sm')} {
+    padding-bottom: 100px;
+  }
 
   .aboutme-container {
     margin-left: 200px;
@@ -56,13 +60,17 @@ const StyledAboutMe = styled("div")`
     .text {
       margin-bottom: 20px;
       color: ${(props) => props.theme.palette.text.secondary};
+
+      ${(props) => props.theme.breakpoints.down('sm')} {
+        font-size: 16px;
+      }
     }
   }
 `;
 
 const AboutMe = () => {
   return (
-    <StyledAboutMe className="AboutMe">
+    <StyledAboutMe className="AboutMe" id="about">
       <Box className="aboutme-container">
         <SectionName ordering="01." title="About me" />
         <Box className="aboutme-info">

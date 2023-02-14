@@ -10,7 +10,7 @@ const portofolioTheme = createTheme({
         main: "#e9a667",
     },
     secondary: {
-        main: "rgba(0, 0, 0, 0.08)",
+        main: "#24272b",
     },
     text :{
       primary: "#fff",

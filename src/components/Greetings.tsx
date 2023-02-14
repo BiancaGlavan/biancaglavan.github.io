@@ -10,6 +10,11 @@ const StyledGreetings = styled("div")`
   display: flex;
   padding-bottom: 230px;
 
+  ${(props) => props.theme.breakpoints.down('sm')} {
+    padding-bottom: 150px;
+    padding-top: 100px;
+  }
+
   .social-links {
     display: flex;
     flex-direction: column;
@@ -46,18 +51,30 @@ const StyledGreetings = styled("div")`
   .text {
     font-weight: 700;
     color: ${(props) => props.theme.palette.text.primary};
+
+    ${(props) => props.theme.breakpoints.down('sm')} {
+      font-size: 26px;
+    }
   }
 
   .button-link {
     color: ${(props) => props.theme.palette.primary.main};
     font-weight: 600;
     margin-top: 30px;
+
+    ${(props) => props.theme.breakpoints.down('sm')} {
+      font-size: 16px;
+    }
   }
 
   .text-details {
     color: ${(props) => props.theme.palette.text.secondary};
     margin-top: 20px;
     margin-bottom: 20px;
+
+    ${(props) => props.theme.breakpoints.down('sm')} {
+      font-size: 16px;
+    }
   }
 `;
 

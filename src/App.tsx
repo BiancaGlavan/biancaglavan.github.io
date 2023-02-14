@@ -2,6 +2,7 @@
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Greetings from "./components/Greetings";
 import Navigation from "./components/Navigation";
@@ -19,6 +20,7 @@ function App() {
         <AboutMe />
         <Projects />
         <Skills />
+        <Contact />
         <Footer />
       </div>
     </ThemeProvider>

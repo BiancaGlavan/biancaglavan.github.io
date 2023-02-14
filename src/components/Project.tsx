@@ -43,10 +43,20 @@ const StyledProject = styled("div")`
 
   .project-title {
     color: ${(props) => props.theme.palette.primary.main};
+
+    ${(props) => props.theme.breakpoints.down('sm')} {
+      font-size: 20px;
+    }
   }
 
   .project-desc-container {
     display: flex;
+
+    .project-desc {
+      ${(props) => props.theme.breakpoints.down('sm')} {
+        font-size: 16px;
+      }
+    }
 
     .arrow-icon {
       color: ${(props) => props.theme.palette.text.secondary};

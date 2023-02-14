@@ -19,6 +19,10 @@ const StyledSkills = styled("div")`
     padding-right: 20px;
   }
 
+  ${(props) => props.theme.breakpoints.down("sm")} {
+    padding-bottom: 100px;
+  }
+
   .skills-container {
     margin-top: 40px;
     display: flex;
@@ -33,55 +37,58 @@ const StyledSkills = styled("div")`
     }
   }
 
-  .backend-skills,
-  .frontend-skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .skills-cat {
     margin-bottom: 20px;
+
+    ${(props) => props.theme.breakpoints.down("sm")} {
+      font-size: 20px;
+    }
   }
 
   .divider {
     background: ${(props) => props.theme.palette.grey[600]};
   }
+
+  .skills-display {
+    ${(props) => props.theme.breakpoints.down("sm")} {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 `;
 
 const Skills = () => {
   return (
-    <StyledSkills className="Skills">
+    <StyledSkills className="Skills" id="skills">
       <SectionName ordering="03." title="Skills" />
       <Box className="skills-container">
-        <Box className="frontend-skills">
-          <Box>
-            <Typography variant="h6" className="skills-cat">
-              Front-end
-            </Typography>
-            <SingleSkill tool="HTML" />
-            <SingleSkill tool="SCSS" />
-            <SingleSkill tool="Javascript" />
-            <SingleSkill tool="Typescript" />
-            <SingleSkill tool="React" />
-            <SingleSkill tool="Redux Toolkit" />
-            <SingleSkill tool="Material UI" />
-            <SingleSkill tool="Styled components" />
-            <SingleSkill tool="React-router-dom" />
-            <SingleSkill tool="Axios" />
-            <SingleSkill tool="Swiper JS" />
-          </Box>
+        <Box className="skills-display">
+          <Typography variant="h6" className="skills-cat">
+            Front-end
+          </Typography>
+          <SingleSkill tool="HTML" />
+          <SingleSkill tool="SCSS" />
+          <SingleSkill tool="Javascript" />
+          <SingleSkill tool="Typescript" />
+          <SingleSkill tool="React" />
+          <SingleSkill tool="Redux Toolkit" />
+          <SingleSkill tool="Material UI" />
+          <SingleSkill tool="Styled components" />
+          <SingleSkill tool="React-router-dom" />
+          <SingleSkill tool="Axios" />
+          <SingleSkill tool="Swiper JS" />
         </Box>
-        <Divider className="divider" orientation="vertical"  flexItem/>
-        <Box className="backend-skills">
-          <Box>
-            <Typography variant="h6" className="skills-cat">
-              Back-end
-            </Typography>
-            <SingleSkill tool="Express JS" />
-            <SingleSkill tool="MongoDB" />
-            <SingleSkill tool="Mongoose" />
-          </Box>
+
+        <Divider className="divider" orientation="vertical" flexItem />
+
+        <Box className="skills-display">
+          <Typography variant="h6" className="skills-cat">
+            Back-end
+          </Typography>
+          <SingleSkill tool="Express JS" />
+          <SingleSkill tool="MongoDB" />
+          <SingleSkill tool="Mongoose" />
         </Box>
       </Box>
     </StyledSkills>

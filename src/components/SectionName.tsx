@@ -14,17 +14,29 @@ const StyledSectionName = styled("div")`
   .section-nr {
     color: ${(props) => props.theme.palette.primary.main};
     font-weight: 600;
+
+    ${(props) => props.theme.breakpoints.down('sm')} {
+      font-size: 20px;
+    }
   }
 
   .section-title {
     color: ${(props) => props.theme.palette.text.primary};
     font-weight: 600;
+
+    ${(props) => props.theme.breakpoints.down('sm')} {
+      font-size: 20px;
+    }
   }
 
   .line {
     height: 0.3px;
     width: 200px;
     background: ${(props) => props.theme.palette.primary.main};
+
+    ${(props) => props.theme.breakpoints.down('sm')} {
+      width: 100px;
+    }
   }
 `;
 

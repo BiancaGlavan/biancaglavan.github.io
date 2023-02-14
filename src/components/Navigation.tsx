@@ -3,7 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useEffect, useState } from "react";
 import SidebarNav from "./SidebarNav";
 import CloseIcon from "@mui/icons-material/Close";
-import { useScrollDirection } from 'react-use-scroll-direction';
+import { useScrollDirection } from "react-use-scroll-direction";
 import classNames from "classnames";
 
 const StyledNavigation = styled("div")`
@@ -12,7 +12,7 @@ const StyledNavigation = styled("div")`
   position: sticky;
   top: 0;
   height: 68px;
-  transition-property: all; 
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 
@@ -20,11 +20,10 @@ const StyledNavigation = styled("div")`
     top: 0;
     opacity: 0.8;
   }
-  
+
   &.hide {
     top: -68px;
   }
-
 
   .navigation-container {
     display: flex;
@@ -66,7 +65,7 @@ const StyledDrawer = styled(Drawer)`
 
 const Navigation = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { isScrolling, isScrollingUp, isScrollingDown } = useScrollDirection()
+  const { isScrolling, isScrollingUp, isScrollingDown } = useScrollDirection();
   const [scrollDirection, setScrollDirection] = useState("up");
 
   const theme = useTheme();
@@ -77,10 +76,8 @@ const Navigation = () => {
   };
 
   useEffect(() => {
-    if (isScrolling === true && isScrollingDown === true)
-      setScrollDirection("down");
-    else if (isScrolling === true && isScrollingUp === true)
-      setScrollDirection("up");
+    if (isScrolling === true && isScrollingDown === true) setScrollDirection("down");
+    else if (isScrolling === true && isScrollingUp === true) setScrollDirection("up");
   }, [isScrollingUp, isScrollingDown, isScrolling]);
 
   const className = scrollDirection === "down" ? " hide" : "";
@@ -95,41 +92,49 @@ const Navigation = () => {
         )}
         {!isMobile && (
           <>
-            <Box className="menu-link">
-              <Typography variant="subtitle1" className="section-nr">
-                01.
-              </Typography>
-              <Typography variant="subtitle1" className="section">
-                About me
-              </Typography>
-            </Box>
+            <a href="#about">
+              <Box className="menu-link">
+                <Typography variant="subtitle1" className="section-nr">
+                  01.
+                </Typography>
+                <Typography variant="subtitle1" className="section">
+                  About me
+                </Typography>
+              </Box>
+            </a>
 
-            <Box className="menu-link">
-              <Typography variant="subtitle1" className="section-nr">
-                02.
-              </Typography>
-              <Typography variant="subtitle1" className="section">
-                Projects
-              </Typography>
-            </Box>
+            <a href="#projects">
+              <Box className="menu-link">
+                <Typography variant="subtitle1" className="section-nr">
+                  02.
+                </Typography>
+                <Typography variant="subtitle1" className="section">
+                  Projects
+                </Typography>
+              </Box>
+            </a>
 
-            <Box className="menu-link">
-              <Typography variant="subtitle1" className="section-nr">
-                03.
-              </Typography>
-              <Typography variant="subtitle1" className="section">
-                Skills
-              </Typography>
-            </Box>
+            <a href="#skills">
+              <Box className="menu-link">
+                <Typography variant="subtitle1" className="section-nr">
+                  03.
+                </Typography>
+                <Typography variant="subtitle1" className="section">
+                  Skills
+                </Typography>
+              </Box>
+            </a>
 
-            <Box className="menu-link">
-              <Typography variant="subtitle1" className="section-nr">
-                04.
-              </Typography>
-              <Typography variant="subtitle1" className="section">
-                Contact
-              </Typography>
-            </Box>
+            <a href="#contact">
+              <Box className="menu-link">
+                <Typography variant="subtitle1" className="section-nr">
+                  04.
+                </Typography>
+                <Typography variant="subtitle1" className="section">
+                  Contact
+                </Typography>
+              </Box>
+            </a>
           </>
         )}
         <StyledDrawer
