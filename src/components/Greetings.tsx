@@ -10,7 +10,7 @@ const StyledGreetings = styled("div")`
   display: flex;
   padding-bottom: 230px;
 
-  ${(props) => props.theme.breakpoints.down('sm')} {
+  ${(props) => props.theme.breakpoints.down("sm")} {
     padding-bottom: 150px;
     padding-top: 100px;
   }
@@ -52,7 +52,7 @@ const StyledGreetings = styled("div")`
     font-weight: 700;
     color: ${(props) => props.theme.palette.text.primary};
 
-    ${(props) => props.theme.breakpoints.down('sm')} {
+    ${(props) => props.theme.breakpoints.down("sm")} {
       font-size: 26px;
     }
   }
@@ -62,7 +62,7 @@ const StyledGreetings = styled("div")`
     font-weight: 600;
     margin-top: 30px;
 
-    ${(props) => props.theme.breakpoints.down('sm')} {
+    ${(props) => props.theme.breakpoints.down("sm")} {
       font-size: 16px;
     }
   }
@@ -71,8 +71,9 @@ const StyledGreetings = styled("div")`
     color: ${(props) => props.theme.palette.text.secondary};
     margin-top: 20px;
     margin-bottom: 20px;
+    max-width: 1000px;
 
-    ${(props) => props.theme.breakpoints.down('sm')} {
+    ${(props) => props.theme.breakpoints.down("sm")} {
       font-size: 16px;
     }
   }
@@ -83,29 +84,31 @@ const Greetings = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <StyledGreetings className="Greetings">
-      {!isMobile && <Box className="social-links">
-        <Tooltip title="GitHub" placement="right">
-          <a href="https://github.com/BiancaGlavan" target="_blank">
-            <IconButton className="icon">
-              <GitHubIcon />
-            </IconButton>
-          </a>
-        </Tooltip>
-        <Tooltip title="LinkedIn" placement="right">
-          <IconButton className="icon">
-            <LinkedInIcon />
-          </IconButton>
-        </Tooltip>
-        {
-          <Tooltip title="Codewars" placement="right">
-            <a href="https://www.codewars.com/users/BiancaMaria" target="_blank">
+      {!isMobile && (
+        <Box className="social-links">
+          <Tooltip title="GitHub" placement="right">
+            <a href="https://github.com/BiancaGlavan" target="_blank">
               <IconButton className="icon">
-                <CodewarsIcon />
+                <GitHubIcon />
               </IconButton>
             </a>
           </Tooltip>
-        }
-      </Box>}
+          <Tooltip title="LinkedIn" placement="right">
+            <IconButton className="icon">
+              <LinkedInIcon />
+            </IconButton>
+          </Tooltip>
+          {
+            <Tooltip title="Codewars" placement="right">
+              <a href="https://www.codewars.com/users/BiancaMaria" target="_blank">
+                <IconButton className="icon">
+                  <CodewarsIcon />
+                </IconButton>
+              </a>
+            </Tooltip>
+          }
+        </Box>
+      )}
       <Box className="greetings-container">
         <Typography className="text" variant="h3">
           Hi, I'm Bianca.
@@ -114,8 +117,8 @@ const Greetings = () => {
           I build things for the web.
         </Typography>
         <Typography className="text-details" variant="body1">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, ex eius, ad non doloremque magnam
-          officiis fugiat deserunt sint nisi animi aperiam sequi quia voluptate asperiores culpa, qui odio nam?
+          I am passionate about utilizing my creativity and problem-solving abilities to develop elegant and efficient
+          solutions to web development challenges.
         </Typography>
         <a href="#resume" target="_blank">
           <Button size="large" variant="outlined" className="button-link">

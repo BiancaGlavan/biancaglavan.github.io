@@ -6,7 +6,7 @@ const StyledAboutMe = styled("div")`
   background: ${(props) => props.theme.palette.background.default};
   padding-bottom: 150px; 
 
-  ${(props) => props.theme.breakpoints.down('sm')} {
+  ${(props) => props.theme.breakpoints.down("sm")} {
     padding-bottom: 100px;
   }
 
@@ -28,6 +28,7 @@ const StyledAboutMe = styled("div")`
   .aboutme-info {
     margin-top: 40px;
     display: flex;
+    align-items: center;
     gap: 100px;
 
     ${(props) => props.theme.breakpoints.down("md")} {
@@ -50,7 +51,7 @@ const StyledAboutMe = styled("div")`
     }
 
     .aboutme-text {
-      width: 50%;
+      width: 60%;
 
       ${(props) => props.theme.breakpoints.down("md")} {
         width: 100%;
@@ -61,7 +62,7 @@ const StyledAboutMe = styled("div")`
       margin-bottom: 20px;
       color: ${(props) => props.theme.palette.text.secondary};
 
-      ${(props) => props.theme.breakpoints.down('sm')} {
+      ${(props) => props.theme.breakpoints.down("sm")} {
         font-size: 16px;
       }
     }
@@ -76,21 +77,21 @@ const AboutMe = () => {
         <Box className="aboutme-info">
           <Box className="aboutme-text">
             <Typography variant="body1" className="text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus excepturi totam, obcaecati vero
-              error voluptatem! Vero error facere eaque blanditiis fugiat at ullam porro a, cum dolorum modi voluptas
-              exercitationem.
+              As a self-taught programmer with a background in history, I am a hardworking and determined individual who
+              has honed their skills in front-end web development through independent study and practical application. I
+              possess a solid foundation in JavaScript, TypeScript, React, and Material UI, as well as other tools and
+              technologies commonly used in front-end web development.
             </Typography>
             <Typography variant="body1" className="text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus excepturi totam, obcaecati vero
-              error voluptatem! Vero error facere eaque blanditiis fugiat at ullam porro a, cum dolorum modi voluptas
-              exercitationem.
+              I am continually seeking to expand my skillset, and a role as a front-end developer on a
+              real project and within a team environment will offer me the opportunity to do so. My strong communication
+              and collaboration skills make me a valuable addition to any team.
             </Typography>
           </Box>
-       
+
           <Box className="img-container">
             <img src="./images/cv-photo.jpg" alt="" />
           </Box>
-     
         </Box>
       </Box>
     </StyledAboutMe>
