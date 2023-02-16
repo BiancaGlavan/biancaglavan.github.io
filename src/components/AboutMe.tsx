@@ -83,9 +83,9 @@ const AboutMe = () => {
               technologies commonly used in front-end web development.
             </Typography>
             <Typography variant="body1" className="text">
-              I am continually seeking to expand my skillset, and a role as a front-end developer on a
-              real project and within a team environment will offer me the opportunity to do so. My strong communication
-              and collaboration skills make me a valuable addition to any team.
+              During my studies, I developed excellent research, analytical, and critical thinking skills that proved to
+              be assets in my transition to programming. Additionally, my experience in communicating complex ideas in a
+              clear and concise manner will be valuable when working on team projects.
             </Typography>
           </Box>
 

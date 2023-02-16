@@ -113,13 +113,17 @@ const Greetings = () => {
         <Typography className="text" variant="h3">
           Hi, I'm Bianca.
         </Typography>
-        <Typography className="text" variant="h3">
-          I build things for the web.
+        <Typography className="text" variant="h4">
+          A self-taught front-end developer.
         </Typography>
         <Typography className="text-details" variant="body1">
+          Please take a look at my portfolio to see examples of my work and feel free to reach out to me to discuss
+          opportunities to collaborate.
+        </Typography>
+        {/* <Typography className="text-details" variant="body1">
           I am passionate about utilizing my creativity and problem-solving abilities to develop elegant and efficient
           solutions to web development challenges.
-        </Typography>
+        </Typography> */}
         <a href="#resume" target="_blank">
           <Button size="large" variant="outlined" className="button-link">
             Check out my Resume
