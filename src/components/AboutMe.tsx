@@ -46,7 +46,7 @@ const StyledAboutMe = styled("div")`
         width: 100%;
         height: 100%;
         border-radius: 50% 20% / 10% 40%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 
@@ -90,7 +90,7 @@ const AboutMe = () => {
           </Box>
 
           <Box className="img-container">
-            <img src="./images/cv-photo.jpg" alt="" />
+            <img src="./images/poza-cv.jpeg" alt="" />
           </Box>
         </Box>
       </Box>
