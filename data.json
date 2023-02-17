@@ -3,7 +3,6 @@
     "id": 1,
     "title": "Music Application",
     "img": "./images/music1.PNG",
-
     "desc": ["Usage of Deezer API for Home page, Explore page, Artist's page, Album's page, Playlist's page", "Audio player with song info, controls (play, pause, next, previous, volume, progression of the track), queue (with the current playlist)", "Back-end for register, login, update profile and add to favorites", "When the user is logged in, user can add artists, playlists, albums and songs to favorites."],
     "tools": [
       "React",
