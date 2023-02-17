@@ -120,11 +120,7 @@ const Greetings = () => {
           Please take a look at my portfolio to see examples of my work and feel free to reach out to me to discuss
           opportunities to collaborate.
         </Typography>
-        {/* <Typography className="text-details" variant="body1">
-          I am passionate about utilizing my creativity and problem-solving abilities to develop elegant and efficient
-          solutions to web development challenges.
-        </Typography> */}
-        <a href="#resume" target="_blank">
+        <a href="https://biancaglavan.github.io/portfolio/CV-BiancaGlavan.pdf" target="_blank">
           <Button size="large" variant="outlined" className="button-link">
             Check out my Resume
           </Button>
