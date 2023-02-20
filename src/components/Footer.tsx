@@ -6,7 +6,7 @@ import CodewarsIcon from "./CodewarsIcon";
 
 const StyledFooter = styled("div")`
   background: ${(props) => props.theme.palette.background.default};
-  
+
   .icon {
     color: ${(props) => props.theme.palette.text.primary};
 
@@ -51,19 +51,20 @@ const Footer = () => {
             </a>
           </Tooltip>
           <Tooltip title="LinkedIn" placement="top">
+          <a href="https://www.linkedin.com/in/bianca-glavan/" target="_blank">
             <IconButton className="icon">
               <LinkedInIcon />
             </IconButton>
+            </a>
           </Tooltip>
-          {
-            <Tooltip title="Codewars" placement="top">
-              <a href="https://www.codewars.com/users/BiancaMaria" target="_blank">
-                <IconButton className="icon">
-                  <CodewarsIcon />
-                </IconButton>
-              </a>
-            </Tooltip>
-          }
+
+          <Tooltip title="Codewars" placement="top">
+            <a href="https://www.codewars.com/users/BiancaMaria" target="_blank">
+              <IconButton className="icon">
+                <CodewarsIcon />
+              </IconButton>
+            </a>
+          </Tooltip>
         </Box>
       )}
     </StyledFooter>

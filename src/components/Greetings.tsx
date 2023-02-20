@@ -94,19 +94,20 @@ const Greetings = () => {
             </a>
           </Tooltip>
           <Tooltip title="LinkedIn" placement="right">
+          <a href="https://www.linkedin.com/in/bianca-glavan/" target="_blank">
             <IconButton className="icon">
               <LinkedInIcon />
             </IconButton>
+            </a>
           </Tooltip>
-          {
-            <Tooltip title="Codewars" placement="right">
-              <a href="https://www.codewars.com/users/BiancaMaria" target="_blank">
-                <IconButton className="icon">
-                  <CodewarsIcon />
-                </IconButton>
-              </a>
-            </Tooltip>
-          }
+
+          <Tooltip title="Codewars" placement="right">
+            <a href="https://www.codewars.com/users/BiancaMaria" target="_blank">
+              <IconButton className="icon">
+                <CodewarsIcon />
+              </IconButton>
+            </a>
+          </Tooltip>
         </Box>
       )}
       <Box className="greetings-container">
