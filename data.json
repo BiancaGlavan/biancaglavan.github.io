@@ -38,5 +38,35 @@
     ],
     "github": "https://github.com/BiancaGlavan/blog-app-react",
     "live_link": "https://keep-the-pot-boiling-blog.netlify.app/"
+  },
+  {
+    "id": 3,
+    "title": "Online Shop",
+    "img": "./images/Productspage.PNG",
+    "desc": ["Usage of API for products, categories.", "View the optimal layout for the app depending on their device's screen size.", "View products by category and pagination.", "Add products to cart, increase and decrease the quantity of the products and see the total price.", "Register, login and logout to the website."],
+    "tools": [
+      "React",
+      "TypeScript",
+      "Redux Toolkit",
+      "React-router-dom",
+      "Material UI",
+      "API"
+    ],
+    "github": "https://github.com/BiancaGlavan/online-shop-redux",
+    "live_link": "https://sweet-rabanadas-e827c7.netlify.app/"
+  },
+  {
+    "id": 4,
+    "title": "Food Recipes App",
+    "img": "./images/food.PNG",
+    "desc": ["Usage of API for recipes, categories, areas.", "View the optimal layout for the app depending on their device's screen size.", "View recipes by category and areas.", "Search for recipes and view single page recipe with details."],
+    "tools": [
+      "HTML",
+      "SCSS",
+      "JavaScript",
+      "API"
+    ],
+    "github": "https://github.com/BiancaGlavan/food-app",
+    "live_link": "https://friendly-blini-ca77c9.netlify.app/"
   }
 ]
