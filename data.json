@@ -24,7 +24,7 @@
     "id": 2,
     "title": "Blog Application",
     "img": "./images/blog.PNG",
-    "desc": ["Usage of Unsplash API to search for images and integrate them into the article.", "Users can create articles, like articles, leave comments on articles.", "Admin page where admin can create, edit and delete categories and articles.", "Back-end for register, login, profile, categories, articles, comments, likes."],
+    "desc": ["Usage of Unsplash API to search for images and integrate them into the article.", "Users can create articles, like articles, leave comments on articles.", "Admin page where admin can create, edit and delete categories and articles.", "Back-end for register, login, profile, categories, articles, comments, likes.", "To see admin page, username: 'bianca', password: '1234'."],
     "tools": [
       "React",
       "TypeScript",
