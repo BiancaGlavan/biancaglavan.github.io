@@ -116,7 +116,7 @@ const Project = ({ project }: IPropsProject) => {
         </Box>
 
         <Box className="links">
-          <Tooltip title="Code Source" placement="bottom">
+          <Tooltip title="Source Code" placement="bottom">
             <a href={project.github} target="_blank">
               <IconButton className="icon">
                 <GitHubIcon />
