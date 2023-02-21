@@ -1,6 +1,6 @@
 
 import { CssBaseline } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
+import { styled, ThemeProvider } from "@mui/material/styles";
 import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -10,11 +10,19 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import portofolioTheme from "./theme/portofolioTheme";
 
+const StyledApp = styled('div')`
+  background: ${(props) => props.theme.palette.background.default};
+  background-image: url("./images/background1cropfilter.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+`;
+
 function App() {
   return (
     <ThemeProvider theme={portofolioTheme}>
       <CssBaseline />
-      <div className="App">
+      <StyledApp className="App">
         <Navigation />
         <Greetings />
         <AboutMe />
@@ -22,7 +30,7 @@ function App() {
         <Skills />
         <Contact />
         <Footer />
-      </div>
+      </StyledApp>
     </ThemeProvider>
   );
 }

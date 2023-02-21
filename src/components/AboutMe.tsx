@@ -3,8 +3,8 @@ import { styled } from "@mui/material/styles";
 import SectionName from "./SectionName";
 
 const StyledAboutMe = styled("div")`
-  background: ${(props) => props.theme.palette.background.default};
   padding-bottom: 150px; 
+  padding-top: 40px;
 
   ${(props) => props.theme.breakpoints.down("sm")} {
     padding-bottom: 100px;
@@ -49,6 +49,7 @@ const StyledAboutMe = styled("div")`
         object-fit: contain;
       }
     }
+    
 
     .aboutme-text {
       width: 60%;

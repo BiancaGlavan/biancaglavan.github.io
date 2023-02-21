@@ -5,13 +5,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CodewarsIcon from "./CodewarsIcon";
 
 const StyledGreetings = styled("div")`
-  background: ${(props) => props.theme.palette.background.default};
   padding-top: 150px;
   display: flex;
-  padding-bottom: 230px;
+  height: 100vh;
 
   ${(props) => props.theme.breakpoints.down("sm")} {
-    padding-bottom: 150px;
     padding-top: 100px;
   }
 
@@ -33,9 +31,10 @@ const StyledGreetings = styled("div")`
     }
   }
 
-  .greetings-container {
+  .greetings-info {
     margin-left: 200px;
     margin-right: 200px;
+    opacity: 1;
 
     ${(props) => props.theme.breakpoints.down("lg")} {
       margin-left: 100px;
@@ -46,7 +45,11 @@ const StyledGreetings = styled("div")`
       margin-left: 20px;
       margin-right: 20px;
     }
+
   }
+
+
+  
 
   .text {
     font-weight: 700;
@@ -71,7 +74,6 @@ const StyledGreetings = styled("div")`
     color: ${(props) => props.theme.palette.text.secondary};
     margin-top: 20px;
     margin-bottom: 20px;
-    max-width: 1000px;
 
     ${(props) => props.theme.breakpoints.down("sm")} {
       font-size: 16px;
@@ -94,10 +96,10 @@ const Greetings = () => {
             </a>
           </Tooltip>
           <Tooltip title="LinkedIn" placement="right">
-          <a href="https://www.linkedin.com/in/bianca-glavan/" target="_blank">
-            <IconButton className="icon">
-              <LinkedInIcon />
-            </IconButton>
+            <a href="https://www.linkedin.com/in/bianca-glavan/" target="_blank">
+              <IconButton className="icon">
+                <LinkedInIcon />
+              </IconButton>
             </a>
           </Tooltip>
 
@@ -110,23 +112,25 @@ const Greetings = () => {
           </Tooltip>
         </Box>
       )}
-      <Box className="greetings-container">
-        <Typography className="text" variant="h3">
-          Hi, I'm Bianca.
-        </Typography>
-        <Typography className="text" variant="h4">
-          A self-taught front-end developer.
-        </Typography>
-        <Typography className="text-details" variant="body1">
-          Please take a look at my portfolio to see examples of my work and feel free to reach out to me to discuss
-          opportunities to collaborate.
-        </Typography>
-        <a href="https://biancaglavan.github.io/portfolio/CV-BiancaGlavan.pdf" target="_blank">
-          <Button size="large" variant="outlined" className="button-link">
-            Check out my Resume
-          </Button>
-        </a>
-      </Box>
+   
+        <Box className="greetings-info">
+          <Typography className="text" variant="h3">
+            Hi, I'm Bianca.
+          </Typography>
+          <Typography className="text" variant="h4">
+            A self-taught front-end developer.
+          </Typography>
+          <Typography className="text-details" variant="body1">
+            Please take a look at my portfolio to see examples of my work and feel free to reach out to me to discuss
+            opportunities to collaborate.
+          </Typography>
+          <a href="https://biancaglavan.github.io/portfolio/CV-BiancaGlavan.pdf" target="_blank">
+            <Button size="large" variant="outlined" className="button-link">
+              Check out my Resume
+            </Button>
+          </a>
+        </Box>
+     
     </StyledGreetings>
   );
 };

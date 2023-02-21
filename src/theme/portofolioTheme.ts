@@ -4,7 +4,7 @@ const portofolioTheme = createTheme({
   palette: {
     background: {
       default: "#212529",
-      paper: "#212529",
+      paper: "#02010a",
     },
     primary: {
         main: "#e9a667",

@@ -4,7 +4,6 @@ import SectionName from "./SectionName";
 import SingleSkill from "./SingleSkill";
 
 const StyledSkills = styled("div")`
-  background: ${(props) => props.theme.palette.background.default};
   padding-bottom: 150px;
   padding-left: 200px;
   padding-right: 200px;
@@ -27,7 +26,7 @@ const StyledSkills = styled("div")`
     margin-top: 40px;
     display: flex;
     max-width: 1000px;
-    background: ${(props) => props.theme.palette.secondary.main};
+    background-color: ${(props) => props.theme.palette.background.paper};
     padding: 50px 20px;
     justify-content: space-around;
     gap: 20px;

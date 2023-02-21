@@ -15,7 +15,6 @@ export interface IProject {
 }
 
 const StyledProjects = styled("div")`
-  background: ${(props) => props.theme.palette.background.default};
   padding-bottom: 150px;
 
   ${(props) => props.theme.breakpoints.down('sm')} {

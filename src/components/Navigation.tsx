@@ -7,7 +7,7 @@ import { useScrollDirection } from "react-use-scroll-direction";
 import classNames from "classnames";
 
 const StyledNavigation = styled("div")`
-  background: ${(props) => props.theme.palette.background.default};
+  background-color: ${(props) => props.theme.palette.background.paper};
   padding: 20px;
   position: sticky;
   top: 0;
@@ -18,7 +18,6 @@ const StyledNavigation = styled("div")`
 
   &.show {
     top: 0;
-    opacity: 0.8;
   }
 
   &.hide {

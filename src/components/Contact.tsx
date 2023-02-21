@@ -4,7 +4,6 @@ import SectionName from "./SectionName";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const StyledContact = styled("div")`
-  background: ${(props) => props.theme.palette.background.default};
   margin-left: 200px;
   margin-right: 200px;
 

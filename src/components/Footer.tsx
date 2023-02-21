@@ -5,7 +5,6 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CodewarsIcon from "./CodewarsIcon";
 
 const StyledFooter = styled("div")`
-  background: ${(props) => props.theme.palette.background.default};
 
   .icon {
     color: ${(props) => props.theme.palette.text.primary};

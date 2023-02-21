@@ -12,7 +12,6 @@ interface IPropsProject {
 const StyledProject = styled("div")`
   display: flex;
   flex-direction: column;
-  gap: 20px;
   max-width: 470px;
   border: 1px solid ${(props) => props.theme.palette.primary.main};
   margin-bottom: 50px;
@@ -23,14 +22,13 @@ const StyledProject = styled("div")`
 
   .project-img {
     max-width: 470px;
-
     ${(props) => props.theme.breakpoints.down("md")} {
       max-width: 100%;
     }
 
     img {
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 
@@ -39,6 +37,7 @@ const StyledProject = styled("div")`
     flex-direction: column;
     gap: 20px;
     padding: 10px;
+    background-color: ${(props) => props.theme.palette.background.paper};
   }
 
   .project-title {
