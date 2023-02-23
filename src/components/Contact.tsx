@@ -49,6 +49,10 @@ const StyledContact = styled("div")`
         color: ${(props) => props.theme.palette.primary.main};
       }
     }
+
+    @media screen and (max-width: 350px) {
+      flex-direction: column;
+    }
   }
 
   .divider {
