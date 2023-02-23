@@ -267,6 +267,10 @@ Error generating stack: `+i.message+`
         color: ${e=>e.theme.palette.primary.main};
       }
     }
+
+    @media screen and (max-width: 350px) {
+      flex-direction: column;
+    }
   }
 
   .divider {
